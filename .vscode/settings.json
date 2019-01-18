@@ -1,0 +1,8 @@
+{
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 20,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 120,
+    "editor.fontWeight": "500",
+    "editor.fontSize": 13
+}

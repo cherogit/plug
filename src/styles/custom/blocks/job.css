@@ -1,0 +1,136 @@
+.job {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 80px;
+
+	@media (--super) {
+		margin-bottom: 145px;
+	}
+
+	&__info {
+		flex-grow: 1;
+		margin-bottom: 30px;
+
+		@media (--mobile-wide) {
+			max-width: 50%;
+		}
+
+		@media (--laptop) {
+			max-width: calc(400 / 1440 * 100%);
+			margin-bottom: 0;
+		}
+	}
+
+	&__pict {
+		position: relative;
+		margin-bottom: 30px;
+		
+		@media (--tablet) {
+			padding: 60px 70px 60px 0;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: none;
+			width: 100vw;
+			height: 100%;
+			border: 1px solid var(--pale-gray);
+
+			@media (--tablet) {
+				display: block;
+			}
+		}
+	}
+
+	&__image {
+		position: relative;
+		width: 220px;
+		height: 220px;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			min-width: 100%;
+			min-height: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 32px;
+		text-transform: uppercase;
+		font: 24px/38px var(--RopaSPR);
+		color: var(--dark-gray);
+
+		@media (--laptop) {
+			font-size: 34px;
+			line-height: 42px;
+		}
+	}
+
+	&__file {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 50px;
+		font: 16px/24px var(--RopaSPL);
+		color: var(--gray);
+
+		@media (--tablet) {
+			font-size: 18px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 31px;
+			height: 44px;
+			background: resolve('file-icon.svg') center/contain no-repeat;
+		}
+	}
+
+	&__file-name {
+		width: 100%;
+	}
+
+	&__file-download {
+		display: inline-block;
+		margin-right: 10px;
+		color: var(--yellowLink);
+		text-decoration: underline;
+		transition: 300ms;
+
+		&:hover {
+			color: var(--yellowLink-hover);
+		}
+
+		&:active {
+			color: var(--yellowLink-active);
+		}
+	}
+
+	&__desc {
+		font: 16px/28px var(--RopaSPL);
+		color: var(--gray);
+
+		@media (--tablet) {
+			font-size: 18px;
+			line-height: 34px;
+		}
+
+		@media (--laptop) {
+			max-width: calc(520 / 1400 * 100%);
+		}
+	}
+}

@@ -1,0 +1,100 @@
+include mixins/_jobs.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/header.pug
+
+		main.main
+			.presentation
+				.presentation__pict
+					img.presentation__img(src="./assets/img/promo-bg.png", alt="")/
+				.presentation__content.container
+					.presentation__title Мы заставляем вещи выглядеть в лучшем свете
+					.presentation__text Комплексные поставки для любых промышленных предприятий организаций Свето и Элетротехническое оборудование. кабельно-проводниковая продукция, низковольтное шкафы и блоки управления.
+			section.section
+				.section__header
+					.section__title.container Что мы делаем
+				.container
+					+jobs([
+						{
+							pict: './assets/img/img1.png',
+							title: 'Свето <br /> и электротехническое оборудование',
+							fileName: 'Каталог продукции от ХХХХ',
+							fileSize: '240 kb',
+							desc: 'Комплексные поставки для любых промышленных предприятий организаций Свето и Элетротехническое оборудование. кабельно-проводниковая продукция, низковольтное шкафы и блоки управления.'
+						},
+						{
+							pict: './assets/img/img2.png',
+							title: 'Комплексные решения',
+							fileName: 'Предложение розничным магазинам',
+							fileSize: '240 kb',
+							desc: 'Комплексное наполнение полок в розничных точках электро и светотехнической продукцией: лампы, LED, светильники, автоматы, выключатели, провод, установочные изделия, монтажные изделия, изолента, и др.'
+						},
+						{
+							pict: './assets/img/img3.png',
+							title: 'Работы под ключ',
+							fileName: 'Выполненные работы',
+							fileSize: '240 kb',
+							desc: 'Подбор, разработка и монтаж любого инженерного решения для построения или модернизации систем освещения, электрических сетей. Помогаем клиентам повысить энергоэффективность и экономить электроэ нергию. Разрабатываем архитектурно-художественную подсветку любых объектов: от парков до стадионов. Работаем по принципу «одного окна».'
+						},
+						{
+							pict: './assets/img/img4.png',
+							title: 'Проектное бюро',
+							fileName: 'Портфолио проектного бюро',
+							fileSize: '240 kb',
+							desc: 'Разработка проектной и рабочей документация любых инженерных систем.'
+						}
+					])
+
+			section.section
+				.section__header
+					.section__title.container Как нас найти
+				.container
+					.location
+						.location__item
+							.location__item-name в Смоленске
+							.location__item-address ул. 25 Сентября, д.60
+							a.location__item-phone(href="tel:84812317272") +7 (4812) 31-72-72
+							.location__item-operatingmode Пн-пт: 9.00 - 18.00
+						.location__item
+							.location__item-name в Брянске
+							.location__item-address пер. Гаражный, д.2, оф.5
+							a.location__item-phone(href="tel:84832266510") +7 (4832) 26-65-10
+							.location__item-operatingmode Пн-пт: 9.00 - 17.00
+						.location__item
+							.location__item-name в Калуге
+							.location__item-address ул. Болотникова д.15
+							a.location__item-phone(href="tel:84842226016") +7 (4842) 22-60-16
+							.location__item-operatingmode Пн-пт: 9.00 - 17.00
+			
+			.get-touch#callback
+				.container
+					.get-touch__wrapper
+						.get-touch__info
+							p Звоните нам на 
+							a.get-touch__phone(href="tel:88007757547") +7 800 775-75-47
+							p или 
+								br/
+								| Оставьте свой телефон, и мы сами перезвоним
+
+
+						form.callback-form(action="")
+							label.callback-form__row
+								span.callback-form__text Ваш телефон
+								input.callback-form__field._phone-mask(type="tel" required)/
+								//- input.callback-form__field._phone-mask._mistake(type="tel" value="+7 (92_)" required)/ Поле с ошибкой.
+							button.callback-form__submit.btn._yellow Позвонить
+							p.callback-form__personal-data Нажимая на кнопку, вы даете согласие на обработку персональных данных.
+						
+
+
+					
+
+
+
+
+			
+		include includes/footer.pug
+		include includes/scripts.pug

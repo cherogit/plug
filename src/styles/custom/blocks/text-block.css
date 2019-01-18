@@ -1,0 +1,54 @@
+.text-block {
+	p {
+		color: inherit;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		transition: 400ms;
+	}
+
+	ol {
+		counter-reset: myCounter;
+
+		li {
+			&::before {
+				counter-increment: myCounter;
+				content: counter(myCounter);
+				display: inline-block;
+			}
+
+			a {
+				color: inherit;
+			}
+		}
+	}
+
+	ul {
+
+		li {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			a {
+				display: inline-block;
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+
+		th {
+			width: 100%;
+		}
+
+		td {
+			width: 100%;
+		}
+	}
+}

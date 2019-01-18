@@ -1,0 +1,31 @@
+.btn {
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	transition: 300ms;
+
+	&._yellow {
+		padding: 0 36px;
+		font: 14px/34px var(--RopaSPR);
+		background: var(--yellowBtn);
+
+		@media (--tablet) {
+			font-size: 16px;
+			line-height: 46px;
+		}
+
+		@media (--desktop) {
+			padding-left: 52px;
+			padding-right: 52px;
+			line-height: 60px;
+		}
+
+		&:hover {
+			background: var(--yellowBtn-hover);
+		}
+
+		&:active {
+			background: var(--yellowBtn-active);
+		}
+	}
+}

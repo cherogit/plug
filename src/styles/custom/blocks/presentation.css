@@ -1,0 +1,138 @@
+.presentation {
+	margin-bottom: 50px;
+
+	@media (--laptop) {
+		margin-bottom: 80px;
+	}
+
+	@media (--super) {
+		margin-bottom: 200px;
+	}
+
+	&__pict {
+		position: relative;
+		height: 200px;
+		margin-bottom: 60px;
+		overflow: hidden;
+
+		@media (--mobile) {
+			height: 220px;
+		}
+
+		@media (--tablet) {
+			height: auto;
+		}
+
+		@media (--desktop) {
+			margin-bottom: 60px;
+		}
+
+		@media (--super) {
+			margin-bottom: 115px;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
+		min-width: 100%;
+		max-height: 100%;
+		margin: 0 auto;
+
+		@media (--tablet) {
+			position: static;
+			transform: none;
+			max-width: 100%;
+			min-width: none;
+			max-height: none;
+			height: auto;
+		}
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		@media (--tablet) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: var(--yellowBtn);
+		}
+
+		&::before {
+			left: 30px;
+			bottom: 0;
+
+			@media (--super) {
+				left: 20px;
+			}
+		}
+
+		&::after {
+			right: 30px;
+			top: 0;
+
+			@media (--super) {
+				right: 20px;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		text-transform: uppercase;
+		font: 28px/36px var(--RopaSPR);
+		color: var(--light-gray);
+
+		@media (--tablet) {
+			max-width: calc(615 / 1440 * 100%);
+			margin-bottom: 0;
+			font-size: 32px;
+			line-height: 40px;
+		}
+
+		@media (--desktop) {
+			font-size: 38px;
+			line-height: 46px;
+		}
+
+		@media (--super) {
+			font-size: 42px;
+		}
+	}
+
+	&__text {
+		font: 16px/28px var(--RopaSPL);
+		color: var(--gray);
+
+		@media (--tablet) {
+			max-width: 50%;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+		@media (--laptop) {
+			max-width: 520px;
+		}
+
+		@media (--desktop) {
+			line-height: 34px;
+		}
+	}
+}

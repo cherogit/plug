@@ -1,0 +1,27 @@
+.header {
+	
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+
+		@media (--mobile-wide) {
+			.btn._yellow {
+				display: inline-block;
+			}
+		}
+
+		@media (--laptop) {
+			height: 120px;
+		}
+
+		@media (--desktop) {
+			height: 170px;
+		}
+
+		.btn._yellow {
+			display: none;
+		}
+	}
+}

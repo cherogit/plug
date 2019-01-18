@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'SourceSansPro-Light';
+	src: resolve('SourceSansPro-Light.woff2') format('woff2'), resolve('SourceSansPro-Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RopaSansPro-Regular';
+	src: resolve('RopaSansPro-Regular.woff2') format('woff2'), resolve('RopaSansPro-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

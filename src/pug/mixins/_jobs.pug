@@ -1,0 +1,16 @@
+mixin jobs(list)
+    ul.list-jobs
+        each item in list
+
+            li.list-jobs__item.job
+
+                .job__pict
+                    .job__image
+                        img(src= item.pict, alt="")/
+                .job__info
+                    .job__title!= item.title
+                    .job__file
+                        .job__file-name= item.fileName
+                        a.job__file-download(href="#") Скачать
+                        span.job__file-size= item.fileSize
+                .job__desc= item.desc

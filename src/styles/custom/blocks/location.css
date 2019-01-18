@@ -1,0 +1,53 @@
+.location {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+
+	@media (--mobile-wide) {
+		padding-top: 45px;
+	}
+
+	@media (--tablet) {
+		margin-bottom: 80px;
+	}
+
+	@media (--laptop) {
+		margin-bottom: 100px;
+	}
+
+	&__item {
+		flex-basis: 220px;
+		margin-bottom: 35px;
+		font: 16px/32px var(--RopaSPL);
+		color: var(--gray);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (--tablet) {
+			margin-bottom: 65px;
+			font-size: 18px;
+
+			&:last-child {
+				margin-bottom: 65px;
+			}
+		}
+	}
+
+	&__item-name {
+		margin-bottom: 25px;
+		font: 18px/30px var(--RopaSPR);
+		color: var(--dark-gray);
+		border-bottom: 5px solid var(--dark-gray);
+
+		@media (--mobile-wide) {
+			font-size: 20px;
+		}
+
+		@media (--tablet) {
+			margin-bottom: 65px;
+		}
+	}
+}

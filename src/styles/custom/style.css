@@ -1,0 +1,15 @@
+@import 'global/variables.css';
+@import 'global/typography.css';
+@import 'global/global.css';
+@import 'global/btns.css';
+
+@import 'blocks/header.css';
+@import 'blocks/logo.css';
+@import 'blocks/presentation.css';
+@import 'blocks/job.css';
+@import 'blocks/location.css';
+@import 'blocks/get-touch.css';
+@import 'blocks/callback-form.css';
+@import 'blocks/footer.css';
+
+@import 'global/animation.css';
